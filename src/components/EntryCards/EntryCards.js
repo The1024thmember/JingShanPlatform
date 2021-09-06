@@ -2,8 +2,14 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import {useHistory} from "react-router-dom";
 
 import './EntryCardStyle.css';
+
+import QA from '../../images/QA.jpg';
+import feed from '../../images/feed.png';
+import market from '../../images/market.png';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -19,11 +25,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function EntryCards() {
+  let history = useHistory();
   const classes = useStyles();
+
   const CommunityCard = () => {
     return <>
       <div className = 'CommunityCard'>
-        <h3>Community</h3>
+        <img src = {QA} />
       </div>
     </>
   };
@@ -31,7 +39,7 @@ export default function EntryCards() {
   const FeedCard = () => {
     return <>
       <div className = 'FeedCard'>
-        <h3>Feed</h3>
+        <img src = {feed} />
       </div>
     </>
   };
@@ -39,64 +47,48 @@ export default function EntryCards() {
   const MarketPlaceCard = () => {
     return <>
       <div className = 'MarketPlaceCard'>
-        <h3>MarketPlace</h3>
+        <img src = {market} />
       </div>
     </>
   };
-  
-  const NewsCard = () => {
-    return <>
-      <div className = 'NewsCard'>
-        <h3>News</h3>
-      </div>
-    </>
-  };
-  
-  const GossipCard = () => {
-    return <>
-      <div className = 'GossipCard'>
-        <h3>Gossip</h3>
-      </div>
-    </>
-  };
-  
-  const JokeCard = () => {
-    return <>
-      <div className = 'JokeCard'>
-        <h3>Joke</h3>
-      </div>
-    </>
-  };  
 
-  
+  const goToCommunity = () => {
+    history.push("/community");
+  }
+
+  const goToFeed = () => {
+    history.push("/feed");
+  }
+
+  const goToMaketPlace = () => {
+    history.push("/marketPlace");
+  }
+
   return (
     <div className={classes.root}>
       <Grid container spacing={1}>
         <Grid container item xs={12} >
-          <Grid className = 'Community' item xs={4}>
-              <CommunityCard />
+          <Grid className = 'Community' item xs={4}
+            onClick = {goToCommunity}
+          >
+              <CommunityCard
+              />
           </Grid>
-          <Grid className = 'Feed' item xs={4}>
-              <FeedCard />
+          <Grid className = 'Feed' item xs={4}
+            onClick = {goToFeed}
+          >
+              <FeedCard
+                onClick = {goToFeed}
+              />
           </Grid>
-          <Grid className = 'MarketPlace' item xs={4}>
-              <MarketPlaceCard />
-          </Grid>
-        </Grid>
-        <Grid container item xs={12}>
-          <Grid className = 'News' item xs={4}>
-            <NewsCard />
-          </Grid>
-          <Grid className = 'Joke' item xs={4}>
-            <JokeCard />
-          </Grid>
-          <Grid className = 'Gossip' item xs={4}>
-            <GossipCard />
+          <Grid className = 'MarketPlace' item xs={4}
+            onClick = {goToMaketPlace}
+          >
+              <MarketPlaceCard
+              />
           </Grid>
         </Grid>
       </Grid>
-      <Grid container className = 'Thumbnails' item xs={12}>
-      </Grid>  
     </div>
   );
 };

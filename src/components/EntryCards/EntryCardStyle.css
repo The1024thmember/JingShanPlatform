@@ -1,41 +1,33 @@
 .CommunityCard{
     height:130px;
-    background-color: lightpink;
     margin:5px;
+    border: 3px dashed   gray;
+}
+
+.CommunityCard > img {
+    width:100%;
+    height:100%;
 }
 
 .FeedCard{
     height:130px;
-    background-color: lightpink;
     margin:5px;
+    border: 3px  double  gray;
 }
+
+.FeedCard > img {
+    width:100%;
+    height:100%;
+}
+
 
 .MarketPlaceCard{
     height:130px;
-    background-color: lightpink;
     margin:5px;
+    border: 3px dotted  gray;
 }
 
-.NewsCard{
-    height:130px;
-    background-color: lightpink;
-    margin:5px;
-}
-
-.GossipCard{
-    height:130px;
-    background-color: lightpink;
-    margin:5px;
-}
-
-.JokeCard{
-    height:130px;
-    background-color: lightpink;
-    margin:5px;
-}
-
-.Thumbnails{
-    height:130px;
-    background-color: lightpink;
-    margin:5px;
+.MarketPlaceCard > img {
+    width:100%;
+    height:100%;
 }

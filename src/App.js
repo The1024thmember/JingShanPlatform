@@ -3,13 +3,8 @@ import Register from './pages/Register.js';
 import Community from './pages/Community.js';
 import Feed from './pages/Feed.js';
 import MarketPlace from './pages/MarketPlace.js';
-import News from './pages/News.js';
-import Joke from './pages/Joke.js';
-import Gossip from './pages/Gossip.js';
 import Profile from './pages/Profile.js';
-
-import SearchBar from './components/SearchBar/SearchBar.js';
-import EntryCards from './components/EntryCards/EntryCards.js';
+import Main from './pages/MainPage.js';
 
 import './pages/MainStyle.css';
 import './App.css';
@@ -24,9 +19,7 @@ function App() {
       <Router>
           <Switch>
             <Route exact path="/profile" component={Profile} />
-            <Route exact path="/gossip" component={Gossip} />
-            <Route path="/joke" component={Joke} />
-            <Route path="/news" component={News} />
+            <Route path = "/community" component = {Community}/>
             <Route path="/marketPlace" component={MarketPlace} />
             <PrivateRoute path="/feed" component={Feed} />
             <Route path="/signup" component={Register} />
@@ -57,12 +50,5 @@ function PrivateRoute ({ component: Component, ...rest }) {
   );
 }
 
-function Main(){
-  return (
-    <div className = 'mainPage'>
-      <SearchBar />
-      <EntryCards />
-    </div>
-  )
-}
+
 export default App;

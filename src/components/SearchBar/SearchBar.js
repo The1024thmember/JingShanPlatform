@@ -11,7 +11,7 @@ import DirectionsIcon from '@material-ui/icons/Directions';
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '2px 4px',
-    margin:'30px auto',
+    margin:'30px auto 10px auto', //top right bottom left
     display: 'flex',
     alignItems: 'center',
     width: 450,
@@ -21,10 +21,11 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
   },
   iconButton: {
-    backgroundColor:'#87aac0',
+    color:'white',
+    backgroundColor:'black',
     borderRadius:'1px',
     '&:hover': {
-        background: "#c5d9e6",
+        background: "rgb(72,72,72)",
       },
   },
 
