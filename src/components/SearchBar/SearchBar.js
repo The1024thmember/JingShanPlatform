@@ -10,11 +10,11 @@ import DirectionsIcon from '@material-ui/icons/Directions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '2px 4px',
-    margin:'30px auto 10px auto', //top right bottom left
+    padding: '1px 2px',
+    margin:'30px auto 5px auto', //top right bottom left
     display: 'flex',
     alignItems: 'center',
-    width: 450,
+    width: '95%',
   },
   input: {
     marginLeft: theme.spacing(1),

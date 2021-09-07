@@ -3,34 +3,36 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
+import './MainPageRecommendStyle.css';
+
 const CommunityQARecommend = ({onClick}) => {
     return (
-        <div onClick = {onClick}>
-            <h1>This is Q&A recommend</h1>
-        </div>
+        <Grid className="CommunityQARecommend" onClick = {onClick}>
+            <h1>Q&A recommend</h1>
+        </Grid>
     )
 }
 
 const FeedRecommend = ({onClick}) => {
     return (
-        <div onClick = {onClick}>
-            <h1>This is Feed recommend</h1>
-        </div>
+        <Grid  className="FeedRecommend" onClick = {onClick}>
+            <h1>Feed recommend</h1>
+        </Grid>
     )
 }
 
 const MarketPromotionRecommend = ({onClick}) => {
     return (
-        <div onClick = {onClick}>
-            <h1>This is MarketPromotion&A recommend</h1>
-        </div>
+        <Grid  className = "MarketPromotionRecommend" onClick = {onClick}>
+            <h1>MarketPromotion&A recommend</h1>
+        </Grid>
     )
 }
 
 
 function MainPageRecommend() {
     return (
-        <div >
+        <div className = 'MainLayout'>
             <CommunityQARecommend
                 onClick = {()=>{console.log("show q and a")}}
             />

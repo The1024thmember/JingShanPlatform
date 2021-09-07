@@ -12,15 +12,8 @@ import market from '../../images/market.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
     alignItems:'center',
-    margin:'0px 50px ',
-  },
-  paper: {
-    padding: theme.spacing(1),
-    margin:'5px',
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
+    margin:'25px 10px 0px 10px ',
   },
 }));
 
@@ -32,6 +25,7 @@ export default function EntryCards() {
     return <>
       <div className = 'CommunityCard'>
         <img src = {QA} />
+        <span>社区问答</span>
       </div>
     </>
   };
@@ -40,6 +34,7 @@ export default function EntryCards() {
     return <>
       <div className = 'FeedCard'>
         <img src = {feed} />
+        <span>生活趣事</span>
       </div>
     </>
   };
@@ -48,6 +43,7 @@ export default function EntryCards() {
     return <>
       <div className = 'MarketPlaceCard'>
         <img src = {market} />
+        <span>附近商店</span>
       </div>
     </>
   };
@@ -66,8 +62,7 @@ export default function EntryCards() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={1}>
-        <Grid container item xs={12} >
+        <Grid container item xs={12}  >
           <Grid className = 'Community' item xs={4}
             onClick = {goToCommunity}
           >
@@ -88,7 +83,6 @@ export default function EntryCards() {
               />
           </Grid>
         </Grid>
-      </Grid>
     </div>
   );
 };

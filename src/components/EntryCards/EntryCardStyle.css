@@ -1,33 +1,27 @@
 .CommunityCard{
-    height:130px;
-    margin:5px;
-    border: 3px dashed   gray;
-}
+    height:80px;
 
-.CommunityCard > img {
-    width:100%;
-    height:100%;
 }
 
 .FeedCard{
-    height:130px;
-    margin:5px;
-    border: 3px  double  gray;
-}
+    height:80px;
 
-.FeedCard > img {
-    width:100%;
-    height:100%;
 }
 
 
 .MarketPlaceCard{
-    height:130px;
-    margin:5px;
-    border: 3px dotted  gray;
+    height:80px;
+
 }
 
-.MarketPlaceCard > img {
-    width:100%;
+div > span {
+    position:relative;
+    font-size: x-small;
+
+}
+
+div > img {
+    width:90%;
     height:100%;
+    border: 1px dashed  gray;
 }

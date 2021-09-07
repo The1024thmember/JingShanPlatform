@@ -1,0 +1,22 @@
+.MainLayout {
+    margin:25px 15px 15px 15px;
+}
+.MainLayout > * {
+    border: 1px solid black;
+    height: 130px;
+    margin-top: 15px;
+}
+
+.CommunityQARecommend{
+
+
+}
+
+.FeedRecommend{
+
+}
+
+.MarketPromotionRecommend{
+
+
+}
